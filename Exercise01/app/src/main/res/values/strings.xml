@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Exercise01</string>
+    <string name="txt1">Mateusz Ptak</string>
+    <string name="button1">Button 1</string>
+    <string name="button2">Button 2</string>
+    <string name="button3">Button 3</string>
+    <string name="button4">Button 4</string>
+    <string name="activity_2_text">Touch me long…</string>
+    <string name="activity_3_text">Activity 3</string>
+    <string name="activity_3_back">Back</string>
+    <string name="activity_2_switch">Switch</string>
+    <string name="activity_2_img_desc">sample description</string>
+</resources>
