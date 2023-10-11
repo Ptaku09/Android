@@ -40,6 +40,8 @@ fun main(args: Array<String>) {
     nullTest()
 
     flowControl(1)
+
+    lambda()
 }
 
 fun addInt(a: Int, b: Int): Int {
@@ -138,5 +140,40 @@ fun flowControl(day: Int) {
         print(" " + i)
     }
 
+    println()
+}
+
+fun lambda() {
+    val myVar: (Int, Int) -> Int = { a: Int, b: Int -> a + b }
+    val myVar2: (Int, Int) -> Int = { a, b -> a + b }
+    val myVar3 = { a: Int, b: Int -> a + b }
+    val myVar4 = { a: Int, b: Int -> a + b }(44, 55)
+
+    println("lambda result 1 = " + myVar(11, 22))
+    println("lambda result 2 = " + myVar2(22, 33))
+    println("lambda result 3 = " + myVar3(33, 44))
+    println("lambda result 4 = " + myVar4)
+
+    fun calculate(a: Int, b: Int, operation: (Int, Int) -> Int): Int {
+        return operation(a, b)
+    }
+
+    var x = calculate(11, 22, { a, b -> a * b })
+    x = calculate(11, 22) { a, b -> a * b }
+
+    println("trailing lambda = " + x)
+
+    val myArr = intArrayOf(1, 2, 3, 4)
+
+    print("array = ")
+    myArr.forEach { x -> print(" $x") }
+    println()
+
+    print("squares = ")
+    myArr.forEach { print(" " + it * it) }
+    println()
+
+    print("omitted arg = ")
+    myArr.forEach { _ -> print(" cos ") }
     println()
 }
