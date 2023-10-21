@@ -2,7 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="bar_color">#FFFF0000</color>
-    <color name="bg_color">#FF00FF00</color>
+    <color name="blue">#FF28569F</color>
+    <color name="red">#FF993552</color>
+    <color name="bar_color">#78AEDD</color>
+    <color name="bg_color">#747474</color>
     <color name="primary_color">#FF0000FF</color>
 </resources>

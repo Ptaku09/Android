@@ -1,13 +1,25 @@
 <resources>
     <string name="app_name">Exercise01</string>
     <string name="txt1">Mateusz Ptak</string>
-    <string name="button1">Button 1</string>
-    <string name="button2">Button 2</string>
-    <string name="button3">Button 3</string>
-    <string name="button4">Button 4</string>
-    <string name="activity_2_text">Touch me long…</string>
-    <string name="activity_3_text">Activity 3</string>
-    <string name="activity_3_back">Back</string>
-    <string name="activity_2_switch">Switch</string>
-    <string name="activity_2_img_desc">sample description</string>
+    <string name="main_activity_title">FC Barcelona</string>
+    <string name="button_lewandowski">Lewandowski</string>
+    <string name="button_pedri">Pedri</string>
+    <string name="button_gavi">Gavi</string>
+    <string name="button_araujo">Araujo</string>
+
+    <string name="activity_lewandowski_title">Robert Lewandowski</string>
+    <string name="activity_lewandowski_img_desc">Robert Lewandowski</string>
+    <string name="activity_lewandowski_desc">Robert Lewandowski to polski piłkarz, uznawany za jednego z najlepszych napastników na świecie. Urodzony 21 sierpnia 1988 roku w Warszawie, zdobył liczne trofea zarówno na poziomie klubowym, grając m.in. dla Bayernu Monachium, jak i reprezentacyjnym, będąc niekwestionowanym liderem polskiej drużyny narodowej.</string>
+
+    <string name="activity_pedri_title">Pedri</string>
+    <string name="activity_pedri_desc">Pedri to młody hiszpański piłkarz, który szybko zyskał uznanie w świecie futbolu dzięki swojej niezwykłej technice i inteligencji gry. Urodzony 25 listopada 2002 roku na Wyspach Kanaryjskich, wkrótce po debiucie w FC Barcelonie stał się integralną częścią zespołu. Jego wszechstronność i umiejętność dyrygowania grą przyniosły mu także sukcesy na arenie międzynarodowej, reprezentując Hiszpanię na różnych turniejach.</string>
+    <string name="activity_pedri_back">Back</string>
+
+    <string name="activity_gavi_title">Gavi</string>
+    <string name="activity_gavi_img_desc">Gavi</string>
+    <string name="activity_gavi_desc">Hiszpański piłkarz, występujący na pozycji pomocnika w hiszpańskim klubie FC Barcelona oraz w reprezentacji Hiszpanii. Uczestnik Mistrzostw Świata 2022.</string>
+
+    <string name="activity_araujo_title">Ronald Araujo</string>
+    <string name="activity_araujo_img_desc">Ronald Araujo</string>
+    <string name="activity_araujo_desc">Ronald Araujo to urugwajski piłkarz, który występuje na pozycji środkowego obrońcy. Urodzony 7 marca 1999 roku, dołączył do FC Barcelony w 2018 roku. Szybko zyskał uznanie dzięki swojej solidnej grze w obronie oraz umiejętnościom w grze głową. Araujo stał się ważnym ogniwem w defensywie Barcelony, zdobywając sympatię kibiców za oddanie i zaangażowanie na boisku.</string>
 </resources>

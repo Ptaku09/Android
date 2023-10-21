@@ -1,16 +1,16 @@
 package com.example.exercise01
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val myListener = View.OnClickListener { view ->
         when (view.id) {
-            R.id.button4 -> {
-                val myIntent = Intent(this, Activity3::class.java)
+            R.id.button_araujo -> {
+                val myIntent = Intent(this, ActivityAraujo::class.java)
                 startActivity(myIntent)
             }
         }
@@ -20,26 +20,26 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val button1: Button = findViewById(R.id.button1)
-        button1.setOnClickListener {
-            val myIntent = Intent(this, Activity2::class.java)
+        val buttonLewandowski: Button = findViewById(R.id.button_lewandowski)
+        buttonLewandowski.setOnClickListener {
+            val myIntent = Intent(this, ActivityLewandowski::class.java)
             startActivity(myIntent)
         }
 
-        val button2: Button = findViewById(R.id.button2)
-        button2.setOnClickListener(this)
+        val buttonPedri: Button = findViewById(R.id.button_pedri)
+        buttonPedri.setOnClickListener(this)
 
-        val button4: Button = findViewById(R.id.button4)
-        button4.setOnClickListener(myListener)
+        val buttonAraujo: Button = findViewById(R.id.button_araujo)
+        buttonAraujo.setOnClickListener(myListener)
     }
 
     override fun onClick(p0: View?) {
-        val myIntent = Intent(this, Activity3::class.java)
+        val myIntent = Intent(this, ActivityPedri::class.java)
         startActivity(myIntent)
     }
 
-    fun run2(view: View) {
-        val myIntent = Intent(this, Activity2::class.java)
+    fun runGavi(view: View) {
+        val myIntent = Intent(this, ActivityGavi::class.java)
         startActivity(myIntent)
     }
 }

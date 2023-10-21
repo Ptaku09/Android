@@ -10,6 +10,9 @@ fun main(args: Array<String>) {
     val lastName = "Swiatek"
     val firstName: String
 
+    val newHeight = height.toInt()
+    println(newHeight)
+
     height = 1.77
 //    weight = 71.5F
     firstName = "Iga"
@@ -137,6 +140,12 @@ fun flowControl(day: Int) {
     println()
 
     for (i in 1..5) {
+        print(" " + i)
+    }
+
+    println()
+
+    for (i in 1..<5) {
         print(" " + i)
     }
 

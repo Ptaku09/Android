@@ -1,24 +1,23 @@
 package com.example.exercise01
 
 import android.app.Activity
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
 import android.widget.Toast
 
-class Activity3 : Activity(), View.OnLongClickListener {
+class ActivityPedri : Activity(), View.OnLongClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_3)
+        setContentView(R.layout.activity_pedri)
 
-        val act3: View = findViewById(R.id.activity3)
-        act3.setOnLongClickListener(this)
+        val act: View = findViewById(R.id.activity_pedri)
+        act.setOnLongClickListener(this)
     }
 
     override fun onStart() {
         super.onStart()
-        val toast: Toast = Toast.makeText(this, "Activity 3 is started", Toast.LENGTH_LONG)
+        val toast: Toast = Toast.makeText(this, "Activity Pedri is started", Toast.LENGTH_LONG)
         toast.setGravity(Gravity.CENTER, 0, 0)
         toast.show()
     }
@@ -28,7 +27,7 @@ class Activity3 : Activity(), View.OnLongClickListener {
         return true
     }
 
-    fun finishActivity3(view: View) {
+    fun finishActivityPedri(view: View) {
         finish()
     }
 }

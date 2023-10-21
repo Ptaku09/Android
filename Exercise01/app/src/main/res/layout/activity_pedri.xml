@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/activity3"
-    tools:context=".Activity3"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="top"
+    android:id="@+id/activity_pedri"
+    tools:context=".ActivityPedri">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/activity_3_text"
+        android:text="@string/activity_pedri_title"
         android:gravity="center"
         android:layout_gravity="center"
-        android:textSize="32sp" />
+        android:textSize="30sp"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/txt_pedri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="@string/activity_pedri_desc"
+        android:textSize="20sp"
+        tools:ignore="RtlHardcoded"
+        android:layout_margin="10sp"
+        android:textColor="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/activity_3_back"
+            android:text="@string/activity_pedri_back"
             android:onClick="finishActivity3" />
 
     </LinearLayout>

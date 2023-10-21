@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:id="@+id/activity_araujo"
+    tools:context=".ActivityAraujo">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/activity_araujo_title"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/img_gavi"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/activity_araujo_img_desc"
+        app:srcCompat="@drawable/araujo" />
+
+    <TextView
+        android:id="@+id/txt_lewandowski"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="@string/activity_araujo_desc"
+        android:textSize="20sp"
+        tools:ignore="RtlHardcoded"
+        android:layout_margin="10sp" />
+
+</LinearLayout>
