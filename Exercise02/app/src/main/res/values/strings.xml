@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Exercise02</string>
+    <string name="author_name">Mateusz Ptak</string>
+    <string name="item_size_18">Size 14</string>
+    <string name="item_size_20">Size 18</string>
+    <string name="item_size_22">Size 22</string>
+    <string name="item_normal">Normal</string>
+    <string name="item_bold">Bold</string>
+    <string name="item_italic">Italic</string>
+    <string name="main_font_size">Font size</string>
+    <string name="main_font_type">Font type</string>
+    <string name="font_color_red">Red</string>
+    <string name="font_color_green">Green</string>
+    <string name="font_color_blue">Blue</string>
+    <string name="main_font_color">Font color</string>
+</resources>
