@@ -1,6 +1,5 @@
 package com.example.exercise02
 
-import android.annotation.SuppressLint
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.ContextMenu
@@ -19,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        applyTheme()
         setContentView(R.layout.activity_main)
 
         val fontSizeButton: Button = findViewById(R.id.font_size_button)
@@ -29,6 +29,18 @@ class MainActivity : AppCompatActivity() {
 
         val fontColorButton: Button = findViewById(R.id.font_color_button)
         registerForContextMenu(fontColorButton)
+
+        val lightThemeButton: Button = findViewById(R.id.light_theme_button)
+        lightThemeButton.setOnClickListener {
+            setPrefs(0)
+            recreate()
+        }
+
+        val darkThemeButton: Button = findViewById(R.id.dark_theme_button)
+        darkThemeButton.setOnClickListener {
+            setPrefs(1)
+            recreate()
+        }
     }
 
     override fun onCreateContextMenu(
@@ -78,7 +90,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    @SuppressLint("ResourceAsColor")
     override fun onContextItemSelected(item: MenuItem): Boolean {
         val name: TextView = findViewById(R.id.author_name)
 
@@ -205,5 +216,31 @@ class MainActivity : AppCompatActivity() {
         }
 
         return super.onContextItemSelected(item)
+    }
+
+    private fun setPrefs(themeNum: Int) {
+        val data = getSharedPreferences("theme", MODE_PRIVATE)
+        val editor = data.edit()
+
+        editor.putInt("theme_num", themeNum)
+        editor.apply()
+    }
+
+    private fun applyTheme() {
+        val data = getSharedPreferences("theme", MODE_PRIVATE)
+
+        when (data.getInt("theme_num", 0)) {
+            0 -> {
+                setTheme(R.style.ThemeLight)
+            }
+
+            1 -> {
+                setTheme(R.style.ThemeDark)
+            }
+
+            else -> {
+                setTheme(R.style.ThemeLight)
+            }
+        }
     }
 }
