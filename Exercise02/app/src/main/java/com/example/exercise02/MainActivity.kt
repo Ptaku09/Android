@@ -1,8 +1,10 @@
 package com.example.exercise02
 
+import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.ContextMenu
+import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
@@ -216,6 +218,39 @@ class MainActivity : AppCompatActivity() {
         }
 
         return super.onContextItemSelected(item)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.hamburger, menu)
+
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.red_trail -> {
+                val redTrailIntent = Intent(this, RedTrailActivity::class.java)
+                startActivity(redTrailIntent)
+                return true
+            }
+
+            R.id.green_trail -> {
+                val greenTrailIntent = Intent(this, GreenTrailActivity::class.java)
+                startActivity(greenTrailIntent)
+                return true
+            }
+
+            R.id.blue_trail -> {
+                val blueTrailIntent = Intent(this, BlueTrailActivity::class.java)
+                startActivity(blueTrailIntent)
+                return true
+            }
+
+            else -> {
+                return super.onOptionsItemSelected(item)
+            }
+        }
     }
 
     private fun setPrefs(themeNum: Int) {

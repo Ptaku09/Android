@@ -15,4 +15,12 @@
     <string name="main_font_color">Font color</string>
     <string name="main_light_theme">Light</string>
     <string name="main_dark_theme">Dark</string>
+    <string name="main_sample_text">Sample text</string>
+    <string name="red_trail">Red trail</string>
+    <string name="green_trail">Green trail</string>
+    <string name="blue_trail">Blue trail</string>
+    <string name="red_trail_desc">A \"red trail\" in mountain hiking is a designated path through the mountains marked with red-colored trail markers, providing a route for hikers to follow. These markers are strategically placed along the trail to ensure clear navigation and help hikers stay on the designated path. Red trails are part of a trail system that may include various difficulty levels, connecting key points of interest, viewpoints, and providing access to the natural beauty of the mountainous landscape. Hikers can follow the red trail markers to explore and enjoy the scenic and challenging aspects of the mountains.</string>
+    <string name="green_trail_desc">A "green trail" in mountain hiking is a designated path through the mountains marked with green-colored trail markers, providing a route for hikers to follow. These markers are strategically placed along the trail to ensure clear navigation and help hikers stay on the designated path. Green trails are part of a trail system that may include various difficulty levels, connecting key points of interest, viewpoints, and providing access to the natural beauty of the mountainous landscape. Hikers can follow the green trail markers to explore and enjoy the scenic and challenging aspects of the mountains.</string>
+    <string name="blue_trail_desc">A "blue trail" in mountain hiking is a designated path through the mountains marked with blue-colored trail markers, providing a route for hikers to follow. These markers are strategically placed along the trail to ensure clear navigation and help hikers stay on the designated path. Blue trails are part of a trail system that may include various difficulty levels, connecting key points of interest, viewpoints, and providing access to the natural beauty of the mountainous landscape. Hikers can follow the blue trail markers to explore and enjoy the scenic and challenging aspects of the mountains.</string>
+    <string name="back">Back</string>
 </resources>

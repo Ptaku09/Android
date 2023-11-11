@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/red_trail"
+        android:title="@string/red_trail" />
+    <item
+        android:id="@+id/green_trail"
+        android:title="@string/green_trail" />
+    <item
+        android:id="@+id/blue_trail"
+        android:title="@string/blue_trail" />
+</menu>
