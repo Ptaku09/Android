@@ -69,11 +69,23 @@
         <item name="colorPrimary">@color/red</item>
     </style>
 
+    <style name="Theme.Exercise02.RedTrailDark" parent="ThemeDark">
+        <item name="colorPrimary">@color/red</item>
+    </style>
+
     <style name="Theme.Exercise02.GreenTrail" parent="ThemeLight">
         <item name="colorPrimary">@color/green</item>
     </style>
 
+    <style name="Theme.Exercise02.GreenTrailDark" parent="ThemeDark">
+        <item name="colorPrimary">@color/green</item>
+    </style>
+
     <style name="Theme.Exercise02.BlueTrail" parent="ThemeLight">
+        <item name="colorPrimary">@color/blue</item>
+    </style>
+
+    <style name="Theme.Exercise02.BlueTrailDark" parent="ThemeDark">
         <item name="colorPrimary">@color/blue</item>
     </style>
 </resources>

@@ -25,7 +25,6 @@
         <activity
             android:name=".RedTrailActivity"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Exercise02.RedTrail"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
