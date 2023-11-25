@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Exercise03</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dog">Dog</string>
+    <string name="cat">Cat</string>
+    <string name="static_fragment_title">Static fragment</string>
+    <string name="akita">Akita</string>
+    <string name="barbet">Barbet</string>
+    <string name="boxer">Boxer</string>
+    <string name="breed">Breed:</string>
+    <string name="brown">Brown</string>
+    <string name="black">Black</string>
+    <string name="white">White</string>
+    <string name="color">Color:</string>
+    <string name="name">name</string>
+    <string name="striped">Striped</string>
+    <string name="british">British</string>
+    <string name="devon_rex">Devon Rex</string>
+    <string name="korat">Korat</string>
+    <string-array name="colors">
+        <item>Black</item>
+        <item>White</item>
+        <item>Brown</item>
+    </string-array>
+</resources>
