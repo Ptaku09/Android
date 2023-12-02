@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="List fragment"
+    app:startDestination="@id/main_frag">
+
+    <fragment
+        android:id="@+id/list_frag"
+        android:name="com.example.exercise04.ListFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_listFragment_to_showFragment"
+            app:destination="@id/details_frag" />
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/add_item_frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_item_frag"
+        android:name="com.example.exercise04.AddItemFragment"
+        android:label="Add player"
+        tools:layout="@layout/fragment_add_item" />
+    <fragment
+        android:id="@+id/swipe_frag"
+        android:name="com.example.exercise04.SwipeFragment"
+        android:label="Swipe"
+        tools:layout="@layout/fragment_swipe" />
+    <fragment
+        android:id="@+id/details_frag"
+        android:name="com.example.exercise04.DetailsFragment"
+        android:label="Player data"
+        tools:layout="@layout/details_fragment" />
+    <fragment
+        android:id="@+id/main_frag"
+        android:name="com.example.exercise04.MainFragment"
+        android:label="Main"
+        tools:layout="@layout/fragment_main" />
+    <action
+        android:id="@+id/action_global_listFragment"
+        app:destination="@id/list_frag"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/main_frag" />
+    <action
+        android:id="@+id/action_global_mainFragment"
+        app:destination="@id/main_frag"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/main_frag" />
+    <action
+        android:id="@+id/action_global_swipeFragment"
+        app:destination="@id/swipe_frag"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/main_frag" />
+    <fragment
+        android:id="@+id/form_frag"
+        android:name="com.example.exercise04.FormFragment"
+        android:label="Form"
+        tools:layout="@layout/form_fragment" />
+    <fragment
+        android:id="@+id/styles_frag"
+        android:name="com.example.exercise04.StylesFragment"
+        android:label="Styles"
+        tools:layout="@layout/styles_fragment" />
+</navigation>

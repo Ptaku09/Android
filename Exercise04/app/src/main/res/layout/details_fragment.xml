@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="10sp"
+    tools:context=".DetailsFragment">
+
+    <ImageView
+        android:id="@+id/detail_player_img"
+        android:layout_width="72dp"
+        android:layout_height="73dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/img"
+        android:src="@drawable/striker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="337dp"
+        android:layout_height="72dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10sp"
+        app:layout_constraintStart_toEndOf="@+id/detail_player_img"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry">
+
+        <TextView
+            android:id="@+id/detail_player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8sp"
+            android:gravity="center_vertical"
+            android:text="@string/name"
+            android:textColor="@color/blue"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/detail_player_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/surname"
+            android:textColor="@color/blue"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/detail_player_desc_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/description"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/detail_player_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_description"
+        app:layout_constraintTop_toBottomOf="@+id/detail_player_desc_txt"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/detail_player_position_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/position"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/detail_player_desc"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <TextView
+        android:id="@+id/detail_player_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/player_position"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@+id/detail_player_position_txt"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/detail_player_number_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/number"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/detail_player_position"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <TextView
+        android:id="@+id/detail_player_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_number"
+        app:layout_constraintTop_toBottomOf="@+id/detail_player_number_txt"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/detail_player_good_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/is_good"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/detail_player_number"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <CheckBox
+        android:id="@+id/detail_player_is_good"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/detail_player_good_txt"
+        tools:layout_editor_absoluteX="-13dp" />
+
+    <Button
+        android:id="@+id/detail_back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/back"
+        app:layout_constraintTop_toBottomOf="@+id/detail_player_is_good"
+        tools:layout_editor_absoluteX="10dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItemFragment">
+
+    <TextView
+        android:id="@+id/add_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragmentAddItem"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_player_name"
+        android:layout_width="176dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_item_title" />
+
+    <EditText
+        android:id="@+id/add_player_surname"
+        android:layout_width="170dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/surname"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_player_name"
+        app:layout_constraintTop_toBottomOf="@+id/add_item_title" />
+
+    <EditText
+        android:id="@+id/add_player_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="101dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/description"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_player_surname" />
+
+    <TextView
+        android:id="@+id/add_player_number_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="182dp"
+        android:text="@string/number"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_player_desc" />
+
+    <SeekBar
+        android:id="@+id/add_player_number_bar"
+        android:layout_width="239dp"
+        android:layout_height="49dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_player_number_title" />
+
+    <RadioGroup
+        android:id="@+id/add_player_position"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:checkedButton="@id/add_position_striker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_player_number_bar">
+
+        <RadioButton
+            android:id="@+id/add_position_striker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/striker" />
+
+        <RadioButton
+            android:id="@+id/add_position_middle_fielder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/middle_fielder" />
+
+        <RadioButton
+            android:id="@+id/add_position_defender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/defender" />
+
+        <RadioButton
+            android:id="@+id/add_position_goalkeeper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/goalkeeper" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/add_is_good"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/is_good"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_player_position" />
+
+    <Button
+        android:id="@+id/add_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/save_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_player_position" />
+
+    <Button
+        android:id="@+id/add_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/cancel_button"
+        app:layout_constraintStart_toEndOf="@+id/add_save_button"
+        app:layout_constraintTop_toBottomOf="@+id/add_player_position" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
