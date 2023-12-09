@@ -75,6 +75,8 @@
     <string name="main">Main</string>
     <string name="swipe">Swipe</string>
     <string name="add_player">Add player</string>
+    <string name="pick">Pick</string>
+    <string name="edit">Edit</string>
 
 
 </resources>

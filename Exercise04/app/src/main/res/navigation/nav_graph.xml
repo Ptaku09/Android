@@ -22,7 +22,14 @@
         android:id="@+id/add_item_frag"
         android:name="com.example.exercise04.AddItemFragment"
         android:label="Add player"
-        tools:layout="@layout/fragment_add_item" />
+        tools:layout="@layout/fragment_add_item">
+        <action
+            android:id="@+id/action_add_item_frag_to_list_frag"
+            app:destination="@id/list_frag" />
+        <action
+            android:id="@+id/action_add_item_frag_to_details_frag"
+            app:destination="@id/details_frag" />
+    </fragment>
     <fragment
         android:id="@+id/swipe_frag"
         android:name="com.example.exercise04.SwipeFragment"
@@ -32,7 +39,11 @@
         android:id="@+id/details_frag"
         android:name="com.example.exercise04.DetailsFragment"
         android:label="Player data"
-        tools:layout="@layout/details_fragment" />
+        tools:layout="@layout/details_fragment">
+        <action
+            android:id="@+id/action_details_frag_to_add_item_frag"
+            app:destination="@id/add_item_frag" />
+    </fragment>
     <fragment
         android:id="@+id/main_frag"
         android:name="com.example.exercise04.MainFragment"
@@ -55,12 +66,17 @@
         app:popUpTo="@id/main_frag" />
     <fragment
         android:id="@+id/form_frag"
-        android:name="com.example.exercise04.FormFragment"
+        android:name="com.example.exercise04.FcbFragment"
         android:label="Form"
-        tools:layout="@layout/form_fragment" />
+        tools:layout="@layout/fcb_fragment" />
     <fragment
         android:id="@+id/styles_frag"
-        android:name="com.example.exercise04.StylesFragment"
+        android:name="com.example.exercise04.TshirtFragment"
         android:label="Styles"
-        tools:layout="@layout/styles_fragment" />
+        tools:layout="@layout/tshirt_fragment" />
+    <fragment
+        android:id="@+id/stadium_frag"
+        android:name="com.example.exercise04.StadiumFragment"
+        android:label="Stadium"
+        tools:layout="@layout/fragment_stadium" />
 </navigation>

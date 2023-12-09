@@ -32,8 +32,9 @@ class SwipeFragment : Fragment() {
 
         val tabLayoutMediator = TabLayoutMediator(binding.tabLayout, viewPager) { tab, position ->
             when (position) {
-                0 -> tab.text = "Form"
-                1 -> tab.text = "Styles"
+                0 -> tab.text = "FCB"
+                1 -> tab.text = "Badge"
+                2 -> tab.text = "Stadium"
             }
         }
 

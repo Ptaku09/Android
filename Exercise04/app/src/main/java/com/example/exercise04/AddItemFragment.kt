@@ -9,8 +9,10 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.SeekBar
+import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.exercise04.databinding.FragmentAddItemBinding
 
 class AddItemFragment : Fragment() {
@@ -34,7 +36,7 @@ class AddItemFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAddItemBinding.inflate(inflater, container, false)
-        
+
         addPlayerName = binding.addPlayerName
         addPlayerSurname = binding.addPlayerSurname
         addPlayerDesc = binding.addPlayerDesc
@@ -44,12 +46,28 @@ class AddItemFragment : Fragment() {
         saveButton = binding.addSaveButton
         cancelButton = binding.addCancelButton
 
+        addPlayerName.setText(arguments?.getString("name") ?: "", TextView.BufferType.EDITABLE)
+        addPlayerSurname.setText(
+            arguments?.getString("surname") ?: "",
+            TextView.BufferType.EDITABLE
+        )
+        addPlayerDesc.setText(arguments?.getString("desc") ?: "", TextView.BufferType.EDITABLE)
+        addPlayerNumber.progress = arguments?.getString("number")?.toInt() ?: 0
+        addIsGood.isChecked = arguments?.getBoolean("good") ?: false
+
+        when (arguments?.getString("position")) {
+            "Striker" -> addPlayerPosition.check(binding.addPositionStriker.id)
+            "Middle Fielder" -> addPlayerPosition.check(binding.addPositionMiddleFielder.id)
+            "Defender" -> addPlayerPosition.check(binding.addPositionDefender.id)
+            "Goalkeeper" -> addPlayerPosition.check(binding.addPositionGoalkeeper.id)
+        }
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var playerPosition = "Striker"
+        var playerPosition = arguments?.getString("position") ?: "Striker"
 
         addPlayerPosition.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
@@ -61,11 +79,25 @@ class AddItemFragment : Fragment() {
         }
 
         cancelButton.setOnClickListener {
-            parentFragmentManager.setFragmentResult(
-                "addNewItem", bundleOf(
-                    "toAdd" to false
+            if (arguments?.getBoolean("toEdit") == true) {
+                parentFragmentManager.setFragmentResult(
+                    "msgtochild", bundleOf(
+                        "id" to arguments?.getInt("id")!!,
+                        "name" to arguments?.getString("name"),
+                        "surname" to arguments?.getString("surname"),
+                        "desc" to arguments?.getString("desc"),
+                        "number" to arguments?.getString("number"),
+                        "position" to arguments?.getString("position"),
+                        "good" to arguments?.getBoolean("good")
+                    )
                 )
-            )
+            } else {
+                parentFragmentManager.setFragmentResult(
+                    "addNewItem", bundleOf(
+                        "toAdd" to false
+                    )
+                )
+            }
 
             requireActivity().onBackPressed()
         }
@@ -74,22 +106,36 @@ class AddItemFragment : Fragment() {
             val playerName: String = addPlayerName.text.toString()
             val playerSurname: String = addPlayerSurname.text.toString()
             val playerDesc: String = addPlayerDesc.text.toString()
-            val playerNumber: Number =
-                if (addPlayerNumber.progress == 0) 1 else if (addPlayerNumber.progress == 100) 99 else addPlayerNumber.progress + 1
+            val playerNumber: String =
+                if (addPlayerNumber.progress == 0) "1" else if (addPlayerNumber.progress == 100) "99" else (addPlayerNumber.progress + 1).toString()
 
-            parentFragmentManager.setFragmentResult(
-                "addNewItem", bundleOf(
-                    "name" to playerName,
-                    "surname" to playerSurname,
-                    "desc" to playerDesc,
-                    "number" to playerNumber,
-                    "position" to playerPosition,
-                    "good" to addIsGood.isChecked,
-                    "toAdd" to true
+            if (arguments?.getBoolean("toEdit") == true) {
+                PlayerRepository.getInstance(requireContext())?.addPlayer(
+                    DBPlayer(
+                        arguments?.getInt("id")!!,
+                        playerName,
+                        playerSurname,
+                        playerDesc,
+                        playerNumber,
+                        playerPosition,
+                        addIsGood.isChecked
+                    )
                 )
-            )
+            } else {
+                parentFragmentManager.setFragmentResult(
+                    "addNewItem", bundleOf(
+                        "name" to playerName,
+                        "surname" to playerSurname,
+                        "desc" to playerDesc,
+                        "number" to playerNumber,
+                        "position" to playerPosition,
+                        "good" to addIsGood.isChecked,
+                        "toAdd" to true
+                    )
+                )
+            }
 
-            requireActivity().onBackPressed()
+            findNavController().navigate(R.id.action_add_item_frag_to_list_frag)
         }
     }
 

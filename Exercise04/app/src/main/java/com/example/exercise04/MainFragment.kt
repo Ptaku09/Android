@@ -1,11 +1,13 @@
 package com.example.exercise04
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.exercise04.databinding.FragmentMainBinding
@@ -14,6 +16,7 @@ class MainFragment : Fragment() {
     private lateinit var invitation: TextView
     private lateinit var authorName: TextView
     private lateinit var authorSurname: TextView
+    private lateinit var mainImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,16 +31,18 @@ class MainFragment : Fragment() {
         invitation = view.mainText
         authorName = view.authorName
         authorSurname = view.authorSurname
+        mainImage = view.mainImage
 
         return view.root
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setData() {
         val data: SharedPreferences =
             requireActivity().getSharedPreferences("prefs", Context.MODE_PRIVATE)
-        invitation.text = data.getString("invitation", "Welcome to the Exercise 04!")
-        authorName.text = data.getString("authorName", "Mateusz")
-        authorSurname.text = data.getString("authorSurname", "Ptak")
+        invitation.text = "Welcome to the Exercise 05!"
+        authorName.text = "Mateusz"
+        authorSurname.text = "Ptak"
     }
 
     private fun setStyle() {
@@ -65,16 +70,37 @@ class MainFragment : Fragment() {
         }
     }
 
+    private fun setImage() {
+        val data: SharedPreferences =
+            requireActivity().getSharedPreferences("prefs", Context.MODE_PRIVATE)
+
+        when (data.getString("image", "fcb")) {
+            "fcb" -> {
+                mainImage.setImageResource(R.drawable.fcb)
+            }
+
+            "fcbkoszulka" -> {
+                mainImage.setImageResource(R.drawable.fcbkoszulka)
+            }
+
+            "campnou" -> {
+                mainImage.setImageResource(R.drawable.campnou)
+            }
+        }
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setData()
         setStyle()
+        setImage()
     }
 
     override fun onResume() {
         super.onResume()
         setData()
         setStyle()
+        setImage()
     }
 
     companion object
