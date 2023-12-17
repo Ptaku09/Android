@@ -57,7 +57,7 @@ class AddItemFragment : Fragment() {
 
         when (arguments?.getString("position")) {
             "Striker" -> addPlayerPosition.check(binding.addPositionStriker.id)
-            "Middle Fielder" -> addPlayerPosition.check(binding.addPositionMiddleFielder.id)
+            "Middle fielder" -> addPlayerPosition.check(binding.addPositionMiddleFielder.id)
             "Defender" -> addPlayerPosition.check(binding.addPositionDefender.id)
             "Goalkeeper" -> addPlayerPosition.check(binding.addPositionGoalkeeper.id)
         }
@@ -72,7 +72,7 @@ class AddItemFragment : Fragment() {
         addPlayerPosition.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
                 binding.addPositionStriker.id -> playerPosition = "Striker"
-                binding.addPositionMiddleFielder.id -> playerPosition = "Middle Fielder"
+                binding.addPositionMiddleFielder.id -> playerPosition = "Middle fielder"
                 binding.addPositionDefender.id -> playerPosition = "Defender"
                 binding.addPositionGoalkeeper.id -> playerPosition = "Goalkeeper"
             }

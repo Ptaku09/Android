@@ -22,6 +22,39 @@ class PlayerRepository(context: Context) {
     init {
         db = PlayerDB.getDatabase(context)!!
         playerDao = db?.playerDao()!!
+
+        addPlayer(
+            DBPlayer(
+                "Lionel",
+                "Messi",
+                "The best player in the world",
+                "10",
+                "Striker",
+                true
+            )
+        )
+
+        addPlayer(
+            DBPlayer(
+                "Robert",
+                "Lewandowski",
+                "The best striker in the world",
+                "9",
+                "Striker",
+                true
+            )
+        )
+
+        addPlayer(
+            DBPlayer(
+                "Pablo",
+                "Gavi",
+                "Fighter",
+                "6",
+                "Middle fielder",
+                true
+            )
+        )
     }
 
     fun getData(): MutableList<DBPlayer>? {

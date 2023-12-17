@@ -77,6 +77,8 @@
     <string name="add_player">Add player</string>
     <string name="pick">Pick</string>
     <string name="edit">Edit</string>
+    <string name="placeholder_text">sample text</string>
+    <string name="todo">TODO</string>
 
 
 </resources>

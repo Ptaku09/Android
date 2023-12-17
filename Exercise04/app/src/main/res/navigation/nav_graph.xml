@@ -79,4 +79,22 @@
         android:name="com.example.exercise04.StadiumFragment"
         android:label="Stadium"
         tools:layout="@layout/fragment_stadium" />
+    <fragment
+        android:id="@+id/photoListFragment"
+        android:name="com.example.exercise04.PhotoListFragment"
+        android:label="PhotoListFragment">
+        <action
+            android:id="@+id/action_photoListFragment_to_photoSlider"
+            app:destination="@id/photoSlider" />
+    </fragment>
+    <fragment
+        android:id="@+id/takePhotoFragment"
+        android:name="com.example.exercise04.TakePhotoFragment"
+        android:label="fragment_take_photo"
+        tools:layout="@layout/fragment_take_photo" />
+    <fragment
+        android:id="@+id/photoSlider"
+        android:name="com.example.exercise04.PhotoSliderFragment"
+        android:label="fragment_photo_slider"
+        tools:layout="@layout/fragment_photo_slider" />
 </navigation>
