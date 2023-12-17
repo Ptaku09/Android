@@ -47,6 +47,7 @@ class PhotoSliderFragment : Fragment() {
             val editor = data.edit()
 
             editor.putString("image2", arguments?.getString("path"))
+            editor.putString("position2", viewPager.currentItem.toString())
             editor.apply()
 
             requireActivity().onBackPressed()

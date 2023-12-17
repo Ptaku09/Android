@@ -32,9 +32,13 @@ class MainFragment : Fragment() {
         Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
     private var externalFilesDirPictures: File? = null
 
+    private lateinit var photoRepo: ImageRepository
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {}
+
+        photoRepo = ImageRepository.getInstance(requireContext())
     }
 
     override fun onCreateView(
@@ -88,10 +92,11 @@ class MainFragment : Fragment() {
         val data: SharedPreferences =
             requireActivity().getSharedPreferences("prefs", Context.MODE_PRIVATE)
 
-        val image = data.getString("image2", "none")
+        val position = data.getString("position2", "none")
 
-        if (image != "none") {
-            mainImage.setImageURI(Uri.parse(image))
+        if (position != "none" && position != null) {
+            val photoUrls = photoRepo.getSharedList()!!
+            mainImage.setImageURI(Uri.parse(photoUrls[position.toInt()].uripath))
         }
     }
 
